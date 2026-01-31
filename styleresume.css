@@ -1,0 +1,153 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans';
+}
+
+/* BODY WITH GRADIENT BACKGROUND */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 90%;
+  max-width: 750px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 35px 40px;
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADINGS */
+h1 {
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(165, 190, 0, 0.6);
+}
+
+h2 {
+  /* color: #4f772d; */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  border-left: 5px solid #a5be00;
+  padding-left: 10px;
+}
+
+/* GREETING TEXT */
+#userGreeting {
+  text-align: center;
+  /* color: #4f772d; */
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* FORM LABELS */
+label {
+  font-weight: 600;
+  /* color: #4f772d; */
+}
+
+/* INPUTS & TEXTAREAS */
+.form-control {
+  border-radius: 14px;
+  border: 1.5px solid #a5be00;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #4f772d;
+  box-shadow: 0 0 0 0.2rem rgba(79, 119, 45, 0.25);
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  background: linear-gradient(135deg, #4f772d, #a5be00);
+  border: none;
+  border-radius: 18px;
+  padding: 14px;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: 0 16px 35px rgba(79, 119, 45, 0.35);
+  transition: all 0.3s ease;
+}
+#viewResumeBtn{
+    background-color: #4f772d;
+}
+#viewResumeBtn:hover{
+    background-color: #a5be00;
+}
+#editResumeBtn:hover{
+    background-color: #4f772d;
+    color: white;
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+}
+
+/* ACTION BUTTONS */
+.btn-info {
+  background: #ecf39e;
+ 
+  border: none;
+  font-weight: 700;
+}
+
+.btn-warning {
+  background: #a5be00;
+  color: white;
+  border: none;
+  font-weight: 700;
+}
+
+.btn-success {
+  background: #4f772d;
+  border: none;
+  font-weight: 700;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  background: linear-gradient(135deg, #4f772d, #a5be00);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* MODAL RESUME VIEW */
+.modal-content {
+  border-radius: 20px;
+  background: #ecf39e;
+}
+
+.modal-title {
+  font-weight: 800;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 576px) {
+  .container {
+    padding: 25px 20px;
+  }
+}
