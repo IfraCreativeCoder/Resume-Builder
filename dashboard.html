@@ -20,15 +20,11 @@
             <button class="logout-btn" onclick="logout()" id="mybutton">Logout</button>
         </div>
     </div>
-
-    <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <!-- Dashboard JS -->
     <script>
-        // Check if user is logged in
+    
         const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
         if (!loggedInUser) {
             window.location.href = 'login.html';
@@ -87,35 +83,33 @@
                 loadResumes();
             }
         }
-//         function viewMyResume() { // New simple JS function
+//         function viewMyResume() { 
 //     const resumesList = document.getElementById('resumes-list');
 //     if (resumesList.style.display === 'none' || resumesList.style.display === '') {
-//         resumesList.style.display = 'block'; // Show resumes
+//         resumesList.style.display = 'block'; 
 //     } else {
-//         resumesList.style.display = 'none'; // Hide resumes
+//         resumesList.style.display = 'none'; 
 //     }
 // }
-// function viewMyResume() { // Updated: Opens the latest resume in a new window
+// function viewMyResume() { 
 //     const resumes = JSON.parse(localStorage.getItem(`resumes_${loggedInUser.email}`)) || [];
 //     if (resumes.length === 0) {
 //         alert('No resumes found. Create one first!');
 //         return;
 //     }
-//     const latestResume = resumes[resumes.length - 1]; // Get the latest resume
+//     const latestResume = resumes[resumes.length - 1]; 
 //     const newWindow = window.open('', '_blank');
 //     newWindow.document.write(latestResume.html);
 //     newWindow.document.close();
 // }
 
-function viewResume(index) { // Updated: Opens the specific resume in a new window
+function viewResume(index) { 
     const resumes = JSON.parse(localStorage.getItem(`resumes_${loggedInUser.email}`)) || [];
     const resume = resumes[index];
     const newWindow = window.open('', '_blank');
     newWindow.document.write(resume.html);
     newWindow.document.close();
 }
-
-// ... (rest of the file remains the same) ...
     </script>
 </body>
 </html>
